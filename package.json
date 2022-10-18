@@ -2,13 +2,13 @@
   "name": "bookshouse",
   "description": "Our project is an online store that will allow all reading lovers to live their passion for reading in complete freedom",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "tsc\" \"nodemon dist/index.js\"",
-    "build": "",
-    "eslint": ""
+    "dev": "nodemon",
+    "build": "rm -rf ./build/ tsc",
+    "eslint": "npx eslint ./src/"
   },
+
   "repository": {
     "type": "git",
     "url": "git@rendu-git.etna-alternance.net:module-9179/activity-50057/group-990976.git"
@@ -20,6 +20,8 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@types/node": "^18.11.0"
+    "@types/node": "^18.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0"
   }
 }
