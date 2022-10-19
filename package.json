@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": " rm -rf ./build/ & tsc",
-    "eslint": "eslint ./src/ --fix"
+    "eslint": "eslint ./src/ fix"
   },
 
   "repository": {
