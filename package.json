@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "build": "rm -rf ./build/ tsc",
-    "eslint": "npx eslint ./src/"
+    "build": "tsc --build",
+    "eslint": "eslint ./src/ --fix"
   },
 
   "repository": {
