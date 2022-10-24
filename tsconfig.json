@@ -1,10 +1,10 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
         /* Visit https://www.typescriptlang.org/tsconfig to learn more about this file and the options */
         
         /* Language and Environment */
         /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-        "target": "es2016",
+        "target": "es2017",
             
         /* Modules */
         /* Specify the root folder within your source files. */
