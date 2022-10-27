@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req: any, res: { send: (arg0: string) => void; }) => {
+app.get('/', (req: any, res: any) => {
   res.send('Hello word');
 });
 
@@ -12,7 +12,7 @@ app.get('/', (req: any, res: { send: (arg0: string) => void; }) => {
 //     console.log(`Example app listening on port ${port}`)
 //   })
 
-app.post('/', (req: any, res: { send: (arg0: string) => void; }) => {
+app.post('/', (req: any, res: any) => {
   res.send('I am a POST request');
 });
 

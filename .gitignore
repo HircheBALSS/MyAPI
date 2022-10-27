@@ -3,3 +3,12 @@ build/
 package-lock.json
 nodemon.json
 .env
+models
+myapp
+routes
+index.ts/
+config/
+migrations
+seeders
+database
+base.pdf

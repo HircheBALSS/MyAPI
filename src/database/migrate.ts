@@ -1,9 +1,9 @@
-import { Model } from 'sequelize';
+// import { Model } from 'sequelize';
 import db from './instance';
-import user from '../models/user';
-import product from '../models/product';
-import order from '../models/order';
-import category from '../models/category';
+// import user from '../models/user';
+// import product from '../models/product';
+// import order from '../models/order';
+// import category from '../models/category';
 
 async function connect() {
   try {
