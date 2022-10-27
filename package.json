@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "build": " rm -rf ./build/ & tsc",
-    "eslint": "eslint ./src"
+    "eslint": "eslint ./src",
+    "migrate": "ts-node ./src/database/migrate.ts"
   },
   "repository": {
     "type": "git",

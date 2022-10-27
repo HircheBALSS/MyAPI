@@ -1,4 +1,9 @@
+import { Model } from 'sequelize';
 import db from './instance';
+import user from '../models/user';
+import product from '../models/product';
+import order from '../models/order';
+import category from '../models/category';
 
 async function connect() {
   try {
@@ -9,3 +14,6 @@ async function connect() {
   }
 }
 connect();
+// async function migrate(){
+//   Model.sync{}
+// }
