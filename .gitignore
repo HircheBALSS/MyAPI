@@ -5,10 +5,9 @@ nodemon.json
 .env
 models
 myapp
-routes
 index.ts/
 config/
 migrations
 seeders
-database
+database/
 base.pdf
