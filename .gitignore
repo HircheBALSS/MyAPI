@@ -2,13 +2,9 @@ node_modules/
 build/
 package-lock.json
 nodemon.json
-.env
-models
-myapp
 index.ts/
 config/
-migrations
 seeders
-database/
 base.pdf
 controllers
+routes/

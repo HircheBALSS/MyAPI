@@ -1,13 +1,18 @@
 import product from './product';
 import User from './user';
 
-const { sequelize, DataTypes } = require('sequelize');
+import db from '../instance';
 
-const db = require('../instance.ts ');
+const { sequelize, DataTypes } = require('sequelize');
 
 const order = db.define(
   'order',
   {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
     Name: {
       type: DataTypes.STRING,
     },
@@ -26,7 +31,7 @@ const order = db.define(
 );
 
 order.hasMany(User);
-User.belongsto(order);
+User.belongsTo(order);
 
 order.belongsToMany(product, { through: 'order_product' });
 product.belongsToMany(order, { through: 'order_product' });

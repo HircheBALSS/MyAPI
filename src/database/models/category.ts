@@ -1,12 +1,17 @@
 import product from './product';
 
-const { sequelize, DataTypes } = require('sequelize');
+import db from '../instance';
 
-const db = require('../instance.ts ');
+const { sequelize, DataTypes } = require('sequelize');
 
 const category = db.define(
   'category',
   {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
     Type: {
       type: DataTypes.STRING,
     },
@@ -25,6 +30,6 @@ const category = db.define(
 );
 
 category.hasMany(product);
-product.belongsto(category);
+product.belongsTo(category);
 
 export default category;

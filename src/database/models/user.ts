@@ -1,8 +1,13 @@
+import db from '../instance';
+
 const { sequelize, DataTypes } = require('sequelize');
 
-const db = require('../instance.ts ');
-
 const User = db.define('User', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
   Login: {
     type: DataTypes.STRING,
     allowNull: false,

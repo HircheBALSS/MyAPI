@@ -1,10 +1,16 @@
-const { sequelize, DataTypes } = require('sequelize');
+import db from '../instance';
 
-const db = require('../instance.ts ');
+const { sequelize, DataTypes } = require('sequelize');
 
 const product = db.define(
   'product',
   {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+
     Name: {
       type: DataTypes.STRING,
     },
