@@ -16,21 +16,13 @@ app.post('/', (req: any, res: any) => {
   res.send('I am a POST request');
 });
 
-app.use(routeorders, (req: any, res: any) => {
-  res.send('here is orders');
-});
+app.use('/', routeorders);
 
-app.use(routeusers, (req: any, res: any) => {
-  res.send('here is users');
-});
+app.use('/', routeusers);
 
-app.use(routeproducts, (req: any, res: any) => {
-  res.send('here is products');
-});
+app.use('/', routeproducts);
 
-app.use(routecategories, (req: any, res: any) => {
-  res.send('here is categories');
-});
+app.use('/', routecategories);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
