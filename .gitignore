@@ -8,3 +8,6 @@ seeders
 base.pdf
 controllers
 routes/
+database
+routes
+.env
