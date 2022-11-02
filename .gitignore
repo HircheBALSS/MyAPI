@@ -6,8 +6,9 @@ index.ts/
 config/
 seeders
 base.pdf
-controllers
 routes/
 database
 routes
 .env
+server.ts
+models/
