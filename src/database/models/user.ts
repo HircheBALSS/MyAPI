@@ -24,7 +24,4 @@ const User = db.define('User', {
   },
 }, { sequelize });
 
-// `sequelize.define` also returns the model
-// console.log(Users === db.models.Users); // true
-
 export default User;

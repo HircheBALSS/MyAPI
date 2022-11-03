@@ -39,4 +39,15 @@ async function create(req: Request, res: Response) {
 }
 controllersproduct.post('/', create);
 
+async function updateById(req: Request, res: Response) {
+  try {
+    const { id } = req.params;
+    const products = await product.update(req.query, { where: { id } });
+    res.send(JSON.stringify(products));
+  } catch (error) {
+    res.send('Not found!');
+  }
+}
+controllersproduct.patch('/:id', updateById);
+
 export default controllersproduct;
