@@ -50,4 +50,15 @@ async function updateById(req: Request, res: Response) {
 }
 controllersproduct.patch('/:id', updateById);
 
+async function deleteById(req: Request, res: Response) {
+  try {
+    const { id } = req.params;
+    const products = await product.destroy({ where: { id } });
+    res.send(JSON.stringify(products));
+  } catch (error) {
+    res.send('impossible connexion');
+  }
+}
+controllersproduct.delete('/:id', deleteById);
+
 export default controllersproduct;
