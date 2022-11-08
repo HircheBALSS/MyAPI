@@ -1,25 +1,19 @@
+import {
+  deleteById, updateById, getAll, getById, create,
+} from '../controllers/orders.controller';
+
 const express = require('express');
 
 const routeorders = express.Router();
 
-routeorders.get('/', (req: any, res:any) => {
-  res.send('Get all element of the resource');
-});
+routeorders.get('/orders/', getAll);
 
-routeorders.get('/:id', (req: any, res:any) => {
-  res.send('Get an element of the resource');
-});
+routeorders.get('/orders/:id', getById);
 
-routeorders.post('/', (req: any, res:any) => {
-  res.send('Create an element of the resource');
-});
+routeorders.post('/orders/', create);
 
-routeorders.patch('/:id', (req: any, res:any) => {
-  res.send('Update an element of the resource');
-});
+routeorders.patch('/orders/:id', updateById);
 
-routeorders.delete('/:id', (req: any, res:any) => {
-  res.send('Delete an element of the resource');
-});
+routeorders.delete('/orders/:id', deleteById);
 
 export default routeorders;

@@ -22,9 +22,6 @@ const category = db.define(
     Editors: {
       type: DataTypes.STRING,
     },
-    password: {
-      type: DataTypes.STRING,
-    },
   },
   { sequelize },
 );

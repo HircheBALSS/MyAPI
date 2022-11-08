@@ -1,25 +1,19 @@
+import {
+  deleteById, updateById, getAll, getById, create,
+} from '../controllers/categories.controller';
+
 const express = require('express');
 
 const routecategories = express.Router();
 
-routecategories.get('/', (req: any, res: any) => {
-  res.send('Get all element of the resource');
-});
+routecategories.get('/categories/', getAll);
 
-routecategories.get('/:id', (req: any, res: any) => {
-  res.send('Get an element of the resource');
-});
+routecategories.get('/categories/:id', getById);
 
-routecategories.post('/', (req: any, res: any) => {
-  res.send('Create an element of the resource');
-});
+routecategories.post('/categories/', create);
 
-routecategories.patch('/:id', (req: any, res: any) => {
-  res.send('Update an element of the resource');
-});
+routecategories.patch('/categories/:id', updateById);
 
-routecategories.delete('/:id', (req: any, res: any) => {
-  res.send('Delete an element of the resource');
-});
+routecategories.delete('/categories/:id', deleteById);
 
 export default routecategories;

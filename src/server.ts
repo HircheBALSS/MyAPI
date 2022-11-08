@@ -16,13 +16,13 @@ app.post('/', (req: any, res: any) => {
   res.send('I am a POST request');
 });
 
-app.use('/orders', routeorders);
+app.use('/', routeorders);
 
-app.use('/users', routeusers);
+app.use('/', routeusers);
 
 app.use('/', routeproducts);
 
-app.use('/categories', routecategories);
+app.use('/', routecategories);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
