@@ -5,8 +5,10 @@ import routeusers from './routes/users.route';
 
 const express = require('express');
 
+const bodyParser = require('body-parser');
+
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.get('/', (req: any, res: any) => {
   res.send('Hello word');
@@ -15,6 +17,8 @@ app.get('/', (req: any, res: any) => {
 app.post('/', (req: any, res: any) => {
   res.send('I am a POST request');
 });
+
+app.use(bodyParser.json());
 
 app.use('/', routeorders);
 
