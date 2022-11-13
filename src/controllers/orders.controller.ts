@@ -25,7 +25,6 @@ export async function create(req: Request, res: Response) {
   try {
     const orders = await order.create(req.query);
     res.send(JSON.stringify(orders));
-    // console.log(JSON.stringify(products));
   } catch (error) {
     res.send('impossible create');
   }

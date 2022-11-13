@@ -19,7 +19,7 @@ export async function updateProduct(req: Request, res: Response) {
 
 export async function deleteProduct(req: Request, res: Response) {
   const { id } = req.params;
-  const produit = await product.destroy(req.body, { where: { id } });
+  const produit = await product.destroy({ where: { id } });
   res.send(JSON.stringify(produit));
   await produit.save();
   return produit;
